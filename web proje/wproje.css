@@ -90,7 +90,31 @@ header{
 	margin: 0 auto;
 }
 
-.anasayfa iframe{
 
-	size: 100px 50px;
+.form{
+
+    margin: 50px auto;
+    padding: 12px 28px;
+   
 }
+
+.anasayfa  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+.resim{
+   
+    width: 600px;
+    height: 400px;
+    background: #1abee2;
+    margin: 10px auto;
+    padding: 10px;
+
+   
+}
+
