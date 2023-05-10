@@ -118,3 +118,41 @@ header{
    
 }
 
+
+.sehrim{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+    
+
+}
+
+.sehrim p{
+ 
+    font-size: 20px;
+    color: #000000;
+   
+}
+
+.sehrim img{
+
+    width: 500px;
+    height: 400px;
+
+}
+
+.alt_sehrim h3{
+color:  rgb(89, 17, 133);
+}
+
+.alt_sehrim p{
+ color: #000000;
+ font-size: 15px;
+ border: #000000;
+
+}
+
+
