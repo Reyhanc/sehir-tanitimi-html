@@ -156,3 +156,50 @@ color:  rgb(89, 17, 133);
 }
 
 
+
+
+
+/* yemek */
+
+.yemek{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+
+.yemek img{
+
+    width: 200px;
+    height: 200px;
+   
+}
+
+.yemek  p{
+
+    margin: 10px;
+}
+
+.yemek2 {
+
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%; 
+}
+
+.yemek3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%; 
+}
+
+
+
