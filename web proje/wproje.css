@@ -203,3 +203,24 @@ color:  rgb(89, 17, 133);
 
 
 
+.alt_miras{
+
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 80%;
+
+
+}
+
+.alt_miras img{
+
+    width: 200px;
+    height: 200px;
+   
+}
+
+
+
