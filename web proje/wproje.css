@@ -35,12 +35,13 @@ section{
     position: relative;
     text-align: center;
     color: #fff;
-    font-size: 30px;
+    font-size: 50px;
     transition: all .5s ease-in-out ;
 }
 
 .section_title h2:hover{
 	background-color: rgb(89, 17, 133);   
+   
 	}
 	
 
@@ -59,37 +60,49 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    width: 80%;
+    width: 10%;
     padding: 10px 0;
  
 }
 
-.nav_links{
+.menu{
     display: flex;
+ 
+    justify-content: center;
+    align-items: center; 
     
 }
+.menu ul {
+  list-style: none;
+  display: flex;
+}
 
-.nav_links li a{
+.menu ul li {
+  margin: 0 10px;
+}
+
+.menu li a{
     margin-left: 15px;
     color: #fff;
     padding: 5px 15px;
     border-radius: 5px;
     transition: all .5s ease-in-out;
+    text-decoration: none;
 
 }
 
-.nav_links li a:hover{
+.menu li a:hover{
     background: #24caac;
 
 }
 
 .logo{
 
-	size:50px;
-	margin: 0 auto;
+	size:30px;
+	margin: 2px auto;
 }
-
 
 .form{
 
@@ -112,10 +125,8 @@ header{
     width: 600px;
     height: 400px;
     background: #1abee2;
-    margin: 10px auto;
+    margin: 10px auto;  
     padding: 10px;
-
-   
 }
 
 
@@ -155,9 +166,29 @@ color:  rgb(89, 17, 133);
 
 }
 
+/* slider */ 
+  
+#slider {
+  font: 19px sans-serif;
+  margin: 0px auto;
+  position: relative;
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+}
 
+#kontrol {
+  position: absolute;
+  right: 0px;
+  bottom: 10px;
+}
 
-
+#kontrol a {
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-decoration: none;
+}
 
 /* yemek */
 
@@ -194,6 +225,7 @@ color:  rgb(89, 17, 133);
 }
 
 .yemek3{
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -222,9 +254,8 @@ color:  rgb(89, 17, 133);
    
 }
 
-
-
-#contact-form {
+  /* İletişim formu stil düzenlemeleri */
+  #contact-form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
