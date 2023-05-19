@@ -28,6 +28,7 @@
     </script>
 
 
+
     </head>
   
     <body>
@@ -59,12 +60,32 @@
             <br>
             <br>
          
+
+            <script>
+              function girisKontrol() {
+                  // Kullanıcıdan gelen e-posta ve şifre bilgilerini alın
+                  var email = document.getElementById('email').value;
+                  var password = document.getElementById('password').value;
+      
+                  // E-posta ve şifre kontrolü yapın
+                  if (email === 'ornek@example.com' && password === 'sifre123') {
+                      // E-posta ve şifre doğru ise hoşgeldin mesajı gösterin
+                      alert('Hoşgeldiniz, ' + email);
+                  } else {
+                      // E-posta ve şifre yanlış ise hata mesajı gösterin
+                      alert('E-posta veya şifre hatalı');
+                  }
+              }
+          </script>
+
+
             <form id="contact-form" action="proje.php" method="post" >
              <h2>LOGİN</h2>
               <input type="email" id="email-input" placeholder="E-posta adresiniz" required>
               <input type="password" id="password-input" placeholder="Şifreniz" required>
               <input type="submit" Value="Gönder" >
              
+              
             </form>
 
        <div class="resim">
@@ -109,17 +130,23 @@
         </div> 
 
         <div class="alt_sehrim">
-          <img src="2.jpg" >
+          <img src="58.jpg" >
         </div>
 
         </div>
         <div class="alt_sehrim">
+
+          <br>
+          <br>
           <h3>COĞRAFYA</h3>
           <p>
            Uşak ili komşuları olan Kütahya ve Afyon illeri gibi İç Anadolu ile Ege Bölgesi arasında geçiş bölümünü teşkil eder. Kuzeyinde Şaphane, Kuzeydoğusunda Murat Dağı, Güneydoğuda Bulkaz Dağı ile çevrilidir. Uşak-Kütahya il sınırını oluşturan Murat Dağı volkanik yapılıdır. Bu Dağın batı eteğinde kaplıcalar bulunmaktadır.
            
            Coğrafi konumundan dolayı Akdeniz iklimi ile İç Anadolu’nun karasal iklimi arasında kaldığından bitki örtüsü de buna benzer bir durum göstermektedir. Yazları sıcak ve kurak, kışları ise iç Anadolu’ya göre daha ılık geçen bir karasal iklim egemendir. Ege Denizi üzerinden gelen bulutların getirdiği yağışlar, il iklimini Orta Anadolu ikliminden ayırır.
            </p>
+
+           <br>
+           <br>
 
            <h3>TARİHÇE</h3>
            <p>Antik dönemdeki adı “Temenothyrea” olan Uşak, İç Ege Bölgesinde Batı ve Orta Anadolu’yu birbirine bağlayan bölgede yeralmaktadır.
@@ -131,6 +158,8 @@
             1071′den sonra yöre Selçuklullar ile Bizans arasında değiştirilmiştir. 1176′da bölge kesin olarak Selçuklu hakimiyetine girmiştir. Selçuklu Devletinin yıkılmasıyla Germiyan Beyliğine, 1429 yılında ise Osmanlı topraklarına katılan Uşak, Kütahya sancağına bağlı bir kaza olmuş, Cumhuriyet döneminde ise 1953 yılında il merkezi haline gelmiştir.
             </p>
      
+            <br>
+            <br>
             <h3>DOĞAL GÜZELLİKLER</h3>
             <p>Göletler: Uşak ilçelerinde sulama amaçlı pek çok gölet bulunmaktadır. Bunlardan önemlileri şunlardır:
 
@@ -144,54 +173,58 @@
 </section>
 
 <!-- slider -->
-<script>
-"use strict";
-
-var slayt = document.getElementsByClassName("slayt");
-var slaytSayisi = slayt.length;
-var slaytNo = 0;
-var i = 0;
-
-slaytGoster(slaytNo);
-
-function sonrakiSlayt() {
-  slaytNo++;
-  if (slaytNo >= slaytSayisi) slaytNo = 0;
-  slaytGoster(slaytNo);
-}
-
-function oncekiSlayt() {
-  slaytNo--;
-  if (slaytNo < 0) slaytNo = slaytSayisi - 1;
-  slaytGoster(slaytNo);
-}
-
-function slaytGoster(slaytNumarasi) {
-  for (i = 0; i < slaytSayisi; i++) {
-    slayt[i].style.display = "none";
-  }
-  slayt[slaytNumarasi].style.display = "block";
-}
-
-  </script>
 <section>
 
-  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
-    <!-- Carousel içeriği buraya gelecek -->
+<div id="mySlider" class="slider">
+  <img src="3.jpg" alt="Slayt 1">
+  <img src="4.jpg" alt="Slayt 2">
+  <img src="48.jpeg" alt="Slayt 3">
+  <img src="47.jpg" alt="Slayt 4">
+  <img src="57.jpg" alt="Slayt 5">
+  <img src="58.jpg" alt="Slayt 6">
+  <img src="7.jpg" alt="Slayt 7">
+  <img src="54.webp" alt="Slayt 8">
+  <img src="60.jpg" alt="Slayt 9">
+ 
+</div>
 
-  
-    <div id="slider">
-      <div class="slayt"><img src="4.jpg" /></div>
-      <div class="slayt2"><img src="3.jpg" /></div>
-      <div class="slayt3"><img src="5.jpg" /></div>
-      <div class="slayt4"><img src="24.jpg" /></div>
-      <div id="kontrol">
-        <a href="javascript:oncekiSlayt()">Önceki</a>
-        <a href="javascript:sonrakiSlayt()">Sonraki</a>
-      </div>
-    </div>
+<div class="slider-buttons">
+  <button onclick="oncekiSlayt()">Önceki</button>
+  <button onclick="sonrakiSlayt()">Sonraki</button>
+</div>
 
+<script>
+  "use strict";
+
+  var slayt = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+  var slaytSayisi = slayt.length;
+  var slaytNo = 0;
+  var i = 0;
+
+  slaytGoster(slaytNo);
+
+  function sonrakiSlayt() {
+    slaytNo++;
+    if (slaytNo >= slaytSayisi) slaytNo = 0;
+    slaytGoster(slaytNo);
+  }
+
+  function oncekiSlayt() {
+    slaytNo--;
+    if (slaytNo < 0) slaytNo = slaytSayisi - 1;
+    slaytGoster(slaytNo);
+  }
+
+  function slaytGoster(slaytNumarasi) {
+    for (i = 0; i < slaytSayisi; i++) {
+      slayt[i].style.display = "none";
+    }
+    slayt[slaytNumarasi].style.display = "block";
+  }
+</script>
+
+
+    
 </section>
 
 
@@ -398,6 +431,50 @@ Clandras Köprüsü ve çevresi bölge için önemli bir mesire yeridir.
             </p>
           </div>
         </div>
+
+        
+      <div class="miras7">
+
+        <h3>Taşyaran Vadi</h3>
+      
+      
+        <div class="alt_miras">
+            <img src="49.jpg">
+            <img src="50.jpg">
+            <img src="51.jpg">
+            <img src="52.jpg">
+          </div>
+      
+          <div class="alt_miras">
+            <p>
+              Batı Anadolu’nun iç kesimlerindeki dağların suyuyla beslenen Gediz Nehri, Taşyaran Vadisi’nin dahil olduğu Gediz Havzasının bu kesiminde ilginç oluşumlara imza atmıştır. Su, vadide kayaları yararak, jeolojik açıdan çok ilginç ve özel bir kanyon oluşturmuştur.
+              Akarsuyun binlerce yılda aşındırarak şekillendirdiği girintili çıkıntılı, dantelimsi oluşumlar heykeltıraşlara ve ressamlara ilham verecek güzelliktedir. Suyun yanında, akarsuyun taşıdığı çakıl gibi malzemelerin kayalıkları aşındırdığı düşünülmektedir. Bu alandaki küçük göletlerin birçoğunun içi suyun getirdiği çakıllarla doludur. Deprem faylarıyla açılmış vadinin çatlak sistemlerine giren su, güçlü akıntılar ve taşıdığı çakıl taşlarıyla adeta bir değirmen gibi öğütmüş ve binlerce yılda böyle olağanüstü şekiller yaratmıştır.
+
+
+            </p>
+          </div>
+        </div>
+
+
+
+        
+      <div class="miras8">
+
+        <h3>Ulubey Kanyonu</h3>
+      
+      
+        <div class="alt_miras">
+            <img src="53.jpg">
+            <img src="54.jpg">
+            <img src="47.jpg">>
+          </div>
+      
+          <div class="alt_miras">
+            <p>
+              Kanyon 3.zamanın sonlarından 4.zamanın başlarına kadar geçen oluşum sürecinde tektonik hareketlerden etkilenmiş ve günümüzde Ege Bölgesi’nde yer alan Horst-Graben yapı şeklini ulaşmıştır. Büyük Menderes Grabeni’nin çökmesi, karstik oluşum süreciyle kanyonun oluşumunun bağlantılıdır. Büyük Menderes Grabeni’nin de gerçekleşen en az üç çökmesi ile birlikte aşındırma hareketleri başlamıştır. Böylece Ulubey Deresi ve Banaz Çayı’nın da geçtiği yerlerde derin menderes vadiler oluşmuştur.
+            </p>
+          </div>
+        </div>
     
 </section>
 
@@ -441,100 +518,32 @@ Clandras Köprüsü ve çevresi bölge için önemli bir mesire yeridir.
     </div>
   </div>
 
-<p>İlgi Alanlarım</p>
-
-<div class="hakkimda2">
-
-  <div class="film">
-    <h2>FİLM</h2>
-    <ul>
-   <li>
-    <img src="28.jpg">
-    Bir Rüya İçin Ağıt</li>
-   <li>
-    <img src="29.jpeg">
-    Esaretin Bedeli
-  </li>
-   <li>
-    <img src="30.webp">
-    Mutluluğa Boya Beni</li>
-   <li>
-    <img src="31.jpeg">
-    Caroline</li>
-  </ul>
-
-  </div>
-  
-  <div class="film">
-    <h2>KİTAP</h2>
-    <ul>
-   <li>
-    <img src="32.webp">
-    Bülbürü Öldürmek</li>
-   <li>
-    <img src="33.jpg">
-    1984
-  </li>
-   <li>
-    <img src="34.jpg">
-   Fareler ve İnsanlar</li>
-   <li>
-    <img src="37.jpg">
-    Böğürtlen Kışı</li>
-    <li>
-      <img src="35.jpg">
-      Küçük Prens</li>
-      <li>
-        <img src="36.jpg">
-      Dorian Gray'ın Portresi</li>
-      
-  </ul>
-  </div>
-
-  <div class="film">
-    <h2>Müzik(Sanatçılar)</h2>
-    <ul>
-   <li>
-    <img src="39.webp">
-    Haluk Levent</li>
-   <li>
-    <img src="38.jpg">
-  Pilli Bebek
-  </li>
-   <li>
-    <img src="41.jpg">
-  Şebnem Ferah</li>
-   <li>
-    <img src="40.jpg">
-    Şanışer</li>
-    <li>
-      <img src="42.jpg">
-      Manga</li>
-      <li>
-        <img src="43.jpg">
-    Adamlar</li>
-
- <li>
-  <img src="44.jpg">
-   Billie Eilish</li>
-
-<li>
-  <img src="45.jpeg">
-Evgeny Grinko</li>
-
-      
-<li>
-  <img src="46.jpg">
-Emircan İğrek</li>
-
-  </ul>
-
-  
  
-</div>
+<!-- DENEME -->
 
-  
+<section id="ilgi">
+
+  <p>İlgi Alanlarım</p>
+
+  <div class="liste-container">
+    <h2>Favori Filmlerim</h2>
+    <ul id="filmListesi"></ul>
+  </div>
+
+  <div class="liste-container">
+    <h2>Favori Kitaplarım</h2>
+    <ul id="kitapListesi"></ul>
+  </div>
     
+  <div class="liste-container">
+    <h2>Favori Sanatçılarım</h2>
+    <ul id="müzikListesi"></ul>
+  </div>
+
+
+
+    <script src="apı.js"></script>
+
 
 </section>
 
@@ -552,36 +561,36 @@ Emircan İğrek</li>
 </div>
 
 <div class="container"  action="proje.php" method="post" >
- 
+
+    
+
 
   <form name="myForm" onsubmit="return validateForm()" method="post">
     <label for="phoneNumber">Telefon Numarası:</label>
     <input type="text" id="phoneNumber" name="phoneNumber" pattern="[0-9]{11}">
       <form>
+       
+        <label for="fname">İsim:</label>
+        <input type="text" id="fname" name="fname">
 
-        
+        <label for="lname">Soyisim:</label>
+        <input type="text" id="lname" name="lname">
         <label for="email-input">E-posta Girişi:</label>
         <input type="email" id="email-input" name="email-input" placeholder="E-posta" required>
 
        
         <label for="text-input">Düşünceleriniz:</label>
         <input type="text" id="text-input" name="text-input" placeholder="Metin" required>
-        <h3>Cinsiyet</h3>
-        <label for="radio-input-1">Kadın</label>
-        <input type="radio" id="radio-input-1" name="radio-input" value="option1" checked>
-        
-        <label for="radio-input-2">Erkek</label>
-        <input type="radio" id="radio-input-2" name="radio-input" value="option2">
-    
+
         <label for="checkbox-input">Onay Kutusu:</label>
         <input type="checkbox" id="checkbox-input" name="checkbox-input">
- 
-    
-        <label for="submit-button">Gönder Düğmesi:</label>
-        <input type="submit" id="submit-button" value="Gönder">
-    
-        <label for="reset-button">Sıfırla Düğmesi:</label>
-        <input type="reset" id="reset-button" value="Sıfırla">
+       
+        <label for="gender-select">Cinsiyet seçiniz:</label>
+        <select id="gender-select" name="gender-select" required>
+            <option value="">Seçiniz</option>
+            <option value="female">Kadın</option>
+            <option value="male">Erkek</option>
+        </select>
     
         <label for="file-input">Dosya Yükleme:</label>
         <input type="file" id="file-input" name="file-input">
@@ -592,13 +601,13 @@ Emircan İğrek</li>
         <label for="time-input">Saat Girişi:</label>
         <input type="time" id="time-input" name="time-input" required>
   
-        <label for="select-input">Seçim Listesi:</label>
-        <select id="select-input" name="select-input" required>
-          <option value="">Seçiniz</option>
-          <option value="option1">Seçenek 1</option>
-          <option value="option2">Seçenek 2</option>
-       
         </select>
+
+        <label for="submit-button">Gönder Düğmesi:</label>
+        <input type="submit" id="submit-button" value="Gönder">
+    
+        <label for="reset-button">Sıfırla Düğmesi:</label>
+        <input type="reset" id="reset-button" value="Sıfırla">
     
        
       </form>
@@ -606,6 +615,11 @@ Emircan İğrek</li>
     
 
 </section>
+
+
+<footer>
+  <p>@UŞAK</p>
+</footer>
 
 </body>
 

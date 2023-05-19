@@ -124,7 +124,7 @@ margin: 2px auto;
  
   width: 600px;
   height: 400px;
-  background: #1abee2;
+  background: #299dba;
   margin: 10px auto;  
   padding: 10px;
 }
@@ -168,26 +168,40 @@ border: #000000;
 
 /* slider */ 
 
-#slider {
-font: 19px sans-serif;
-margin: 0px auto;
-position: relative;
+.slider {
 width: 600px;
-height: 300px;
+height: 400px;
+margin: 20px auto;
+position: relative;
 overflow: hidden;
+background-color: #f1f1f1; /* Arka plan rengi */
+
+border-radius: 5px; 
 }
 
-#kontrol {
-position: absolute;
-right: 0px;
-bottom: 10px;
+.slider img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+background-color: #299dba;
+
 }
 
-#kontrol a {
+.slider-buttons {
+text-align: center;
+margin-top: 10px;
+
+
+}
+
+.slider-buttons button {
+margin: 0 5px;
+padding: 5px 10px;
+font-size: 16px;
+border: none;
+background-color: #000000;
 color: #ffffff;
-background-color: rgba(0, 0, 0, 0.5);
-padding: 10px;
-text-decoration: none;
+cursor: pointer;
 }
 
 /* yemek */
@@ -313,7 +327,53 @@ border: 1px solid black;
   object-fit: cover;
 }
 
+
+/* DENEME */
+
+
+
+#ilgi h1 {
+  margin: 0;
+  color: #333;
+}
+
+#ilgi h2 {
+  color: #333;
+}
+
+#ilgi ul {
+  list-style-type: circle;
+  margin-left: 20px;
+}
+
+#ilgi .liste-container {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#ilgi .liste-container h2 {
+  color: #1c4587;
+  margin-top: 0;
+}
+
+#ilgi  .liste-item {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
 /* İletişim formu stil düzenlemeleri */
+
 #contact-form {
   max-width: 400px;
   margin: 0 auto;
@@ -333,7 +393,7 @@ input[type="email"] {
 
 button {
   padding: 10px 20px;
-  background-color: #4caf50;
+  background-color: hsl(191, 84%, 57%);
   color: white;
   border: none;
   border-radius: 4px;
@@ -341,7 +401,7 @@ button {
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #24caac;
 }
 
 
@@ -388,6 +448,32 @@ button[type="reset"] {
   font-size: 14px;
 }
 
+.button {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.reset-button {
+  background-color: #f44336;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
+
 button[type="submit"]:hover,
 button[type="reset"]:hover {
   background-color: #45a049;
@@ -403,3 +489,6 @@ legend {
   margin-bottom: 5px;
 }
 
+footer{
+  background-color: #299dba;
+}

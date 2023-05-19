@@ -8,60 +8,27 @@
 </head>
 <body> 
   
-<?php  
-  $ema = 'g221210036@sakarya.edu.tr';
-  $pass = '221210036';
-   
-     if(isset($_POST['email'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+<?php
 
-        if($email==$ema && $password==$pass){
-            echo "GİRİŞ BAŞARILI";
-        }
-        else {
-            echo "HATALI GİRİŞ";
-        }
+function girisKontrol();
 
-     }
-     
-    ?>
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// Kullanıcıdan gelen e-posta ve şifre bilgilerini alın
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-<script>
-  const app = new Vue({
-    el: '#contact-form',
-    methods: {
-      checkName() {
-        // İsim kontrolü işlemlerini gerçekleştirin
-      },
-      checkEmail() {
-    echo "isim eşleşti";
-      }
-    }
-  });
-
-  methods: {
-  checkName() {
-    const name = document.getElementById('name-input').value;
-    if (name.trim() === 'Reyhan') {
-      alert('Lütfen adınızı girin!');
-    } else {
-      // İsim geçerli, istediğiniz işlemleri yapabilirsiniz
-    }
-  }
-  checkEmail() {
-    const email = document.getElementById('email-input').value;
-    const emailRegex = /^\S+@\S+\.\S+$/;
-    if (!emailRegex.test(email)) {
-      alert('Lütfen geçerli bir e-posta adresi girin!');
-    } else {
-        echo "e-posta eşleşti";
-    }
-  }
+// E-posta ve şifre kontrolü yapın
+if ($email === 'g221210036@ssakarya.edu.tr' && $password === 'g221210036') {
+    // E-posta ve şifre doğru ise hoşgeldin mesajı gösterin
+    echo 'Hoşgeldiniz, ' . $email;
+} else {
+    // E-posta ve şifre yanlış ise hata mesajı gösterin
+    echo 'E-posta veya şifre hatalı';
 }
-</script>
+}
+?>
+
+
 
 </body>
 </html>
