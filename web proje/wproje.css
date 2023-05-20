@@ -37,10 +37,14 @@ section{
   color: #fff;
   font-size: 50px;
   transition: all .5s ease-in-out ;
+    font-style: italic;
+text-decoration: underline;
+ font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .section_title h2:hover{
 background-color: rgb(89, 17, 133);   
+
  
 }
 
@@ -141,6 +145,11 @@ margin: 2px auto;
 
 }
 
+.alt_sehrim p{
+
+  font-weight: bold;
+}
+
 .sehrim p{
 
   font-size: 20px;
@@ -202,6 +211,19 @@ border: none;
 background-color: #000000;
 color: #ffffff;
 cursor: pointer;
+}
+/* ----- */
+
+
+.ilkler img{
+
+width: 500px;
+height: 400px;
+
+}
+
+.x{
+color: #dbdba0;
 }
 
 /* yemek */
@@ -491,4 +513,22 @@ legend {
 
 footer{
   background-color: #299dba;
+}
+
+.logo img{
+width: 100px;
+height: auto;
+}
+
+.son {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.isim{
+  background-color: #d32f2f;
 }
